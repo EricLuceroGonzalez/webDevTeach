@@ -5,12 +5,27 @@
 ---------------------------------------------
 */
 
+function centiToFarenheit(parametro) {
+  gradosC = parametro * (9 / 5) + 32;
+  return gradosC;
+}
+
+var a = centiToFarenheit(2);
+// console.log(a);
+
 /*
 ---------------------------------------------
 2.- Hacer una función que muestre la tabla de
     multiplicar de un número
 ---------------------------------------------
 */
+function tablaMultiplicar(numero) {
+  for (i = 0; i <= 12; i++) {
+    resultado = numero * i;
+    // console.log(numero + ' x ' + i + ' = ' + resultado);
+  }
+}
+tablaMultiplicar(33);
 
 /*
 ---------------------------------------------
@@ -19,6 +34,13 @@
 ---------------------------------------------
 */
 
+function conteoParametros() {
+  console.log("Dentro de conteoParametros()");
+  console.log("Parametros: " + arguments.length);
+}
+// console.log(arguments.);
+
+conteoParametros("1", 2, "otro parametro", { verdadero: true, falso: false });
 
 /* El objeto "arguments" solo puede ser usado con las funciones
    clásicas; no puede ser utilizado dentro de arrow functions
@@ -31,7 +53,6 @@
 ---------------------------------------------
 */
 
-
 /*
 ---------------------------------------------
 5.- Leer el nombre y sueldo de 8 empleados y
@@ -40,14 +61,12 @@
 ---------------------------------------------
 */
 
-
 /*
 ---------------------------------------------
 6.- Guardar en un array los 20 primeros
     números pares
 ---------------------------------------------
 */
-
 
 /*
 ---------------------------------------------
@@ -59,7 +78,6 @@
 ---------------------------------------------
 */
 
-
 /*
 ---------------------------------------------
 8.- Crear una funcion que reciba como
@@ -68,14 +86,12 @@
 ---------------------------------------------
 */
 
-
 /*
 ---------------------------------------------
 9.- Mostrar los primeros 10 dígitos de la
     serie Fibbonacci
 ---------------------------------------------
 */
-
 
 /*
             Condicionales
@@ -123,7 +139,6 @@
 ---------------------------------------------
 */
 
-
 /*
 ---------------------------------------------
 16.- Escribe una función que imprima todos
@@ -132,14 +147,12 @@
 ---------------------------------------------
 */
 
-
 /*
 ---------------------------------------------
 17.- Escribe una función que imprima todos
      los números pares entre 1 y 100
 ---------------------------------------------
 */
-
 
 /*
 ---------------------------------------------
@@ -148,7 +161,6 @@
 ---------------------------------------------
 */
 
-
 /*
 ---------------------------------------------
 19.- Escribe una función que halle la suma
@@ -156,7 +168,6 @@
      1 y n
 ---------------------------------------------
 */
-
 
 /*
 ---------------------------------------------
