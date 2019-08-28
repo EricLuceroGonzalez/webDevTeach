@@ -17,7 +17,6 @@ console.log(ayudanteDeSantaA.ladrar());
 
 // Clases (objetos no literales)
 class Perro {
-
     constructor(raza, color, nombre, temperamento){
     this.raza = raza;
     this.color = color;
