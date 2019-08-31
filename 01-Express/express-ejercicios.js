@@ -4,6 +4,7 @@
 ----------------------------------------------------------------
 */
 var express = require("express");
+var request = require("request");
 var app = express();
 var port = 3000;
 
@@ -41,7 +42,7 @@ app.get("/api/suma", (req, res) => {
   var num1 = req.query.num1;
   var num2 = req.query.num2;
   let suma = Number(num1) + Number(num2);
-  // console.log(suma);
+  console.log(`LA suma es: ${suma}`);
   res.status(200).send({ message: `Suma: ${suma}` });
 });
 
@@ -77,7 +78,9 @@ app.get("/api/swapi/:personaje", (req, res) => {
 
     // Request a la swapi
     request.get(URL_swapi, (err, res, body) => {
-      res.statusCode === 200 ? resolve(JSON.parse(body)) : reject(" Error ");
+      res.statusCode === 200 
+      ? resolve(JSON.parse(body)) 
+      : reject(" Error ");
     });
   });
   // Llamada a la promesa
