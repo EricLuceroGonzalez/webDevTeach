@@ -71,7 +71,26 @@ app.get("/api/:usuario/", (req, res) => {
                     }}
 ----------------------------------------------------------------
 */
-app.get("/api/swapi", () => {}
-);
+app.get("/api/swapi/:personaje", (req, res) => {
+  const promesa_API = new Promise((resolve, reject) => {
+    const URL_swapi = `https://swapi.co/api/people/${req.params.personaje}`;
 
-app.listen(port, () => console.log(`Servidor en desde puerto ${port}`));
+    // Request a la swapi
+    request.get(URL_swapi, (err, res, body) => {
+      res.statusCode === 200 ? resolve(JSON.parse(body)) : reject(" Error ");
+    });
+  });
+  // Llamada a la promesa
+  promesa_API
+    .then(json => {
+      console.log(`El personaje No. ${req.params.personaje} es ${json.name}`);
+      res.status(200).send({ personaje: json });
+    })
+    .catch(err => {
+      console.log(err);
+    });
+});
+
+app.listen(port, () =>
+  console.log(`Servidor en puerto ${port} - ejercicios ExpressJS`)
+);
