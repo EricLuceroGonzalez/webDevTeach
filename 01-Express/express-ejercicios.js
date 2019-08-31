@@ -56,7 +56,7 @@ app.get("/api/suma", (req, res) => {
 */
 // app.get("", (req, res) => {});
 app.get("/api/:usuario/", (req, res) => {
-    res.send(req.params)
+  res.send(req.params);
 });
 /*
 ----------------------------------------------------------------
@@ -71,5 +71,7 @@ app.get("/api/:usuario/", (req, res) => {
                     }}
 ----------------------------------------------------------------
 */
+app.get("/api/swapi", () => {}
+);
 
 app.listen(port, () => console.log(`Servidor en desde puerto ${port}`));
